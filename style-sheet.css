@@ -76,21 +76,31 @@ html, body {
 .footer {
 	color: #737373;
 	font-size: 0.8em;
+	padding-bottom: 1.5em;
 	font-family: 'Roboto', sans-serif;
 }
 
 .nostyle:link {
     text-decoration: inherit;
-    color: inherit;
-    cursor: auto;
+    cursor: pointer;
 }
 
 .nostyle:visited {
     text-decoration: inherit;
-    color: inherit;
-    cursor: auto;
+    cursor: progress;
 }
 
+.anchor-style {
+	color: #003366;
+}
+
+a {
+	color: #003366;
+}
+
+a:hover {
+	color: red;
+}
 /* Relate to about page */
 .about-box {
 	margin-top: 5%;
@@ -116,6 +126,7 @@ html, body {
 	margin-top: 3%;
 	width: 35%;
 }
+
 .blog-title {
 	color: #003366;
 	font-family: 'Roboto Slab', sans-serif;
@@ -128,7 +139,7 @@ html, body {
 	font-family: 'Roboto', sans-serif;
 	font-weight: 300;
 	font-size: 1em;
-	padding-top: 1%;
+	padding-top: 2%;
 }
 
 .blog-description {
@@ -140,4 +151,38 @@ html, body {
 
 .top-padd {
 	padding-bottom: 5%;
+}
+
+/* Blog related CSS */
+.blog-data-box {
+	margin-top: 3%;
+	width: 35%;
+}
+
+.blog-data-title {
+	color: #003366;
+	font-family: 'Roboto Slab', sans-serif;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 2.5em;
+}
+
+.blog-data-brief {
+	font-weight: 400;
+	font-family: 'Roboto', sans-serif;
+	font-style: normal;
+	color: #262626;
+	font-size: 1.2em;
+	padding-top: 3%;
+	text-align: justify;
+}
+
+.quote-style {
+	font-weight: 300;
+	font-family: 'Roboto', sans-serif;
+	font-style: italic;
+}
+
+.text-center {
+	text-align: center;
 }
