@@ -118,6 +118,7 @@ a:hover {
 	text-align: left;
 	color: #737373;
 	font-family: 'Josefin Slab', sans-serif;
+	text-align: justify;
 }
 
 /* Relate to blog-listing page */
@@ -185,4 +186,23 @@ a:hover {
 
 .text-center {
 	text-align: center;
+}
+
+@media screen and (max-width: 1080px) {
+	/* Blog related CSS */
+
+	.blog-box {
+		margin-top: 3%;
+		width: 75%;
+	}
+
+	.blog-data-box {
+		margin-top: 3%;
+		width: 75%;
+	}
+
+	.about-box {
+		margin-top: 5%;
+		width: 75%;
+	}
 }
