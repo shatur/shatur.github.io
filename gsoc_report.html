@@ -1,0 +1,89 @@
+<!-- 	This code is for shatur.github.io. Blog
+		about GSoC'17 Report
+-->
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title>Tushar Saini (GSoC Report)</title>
+		<script type="text/javascript" src="jscript.js"></script>
+		<link rel="stylesheet" href="style-sheet.css">
+		<link rel="shortcut icon" href="Image/icon.png" />
+		<meta name = "viewport" content="width=device-width, initial-scale=1">
+	</head>
+
+
+	<body>
+
+		<div class="blog-data-box middle">
+			<div class="blog-data-title">
+				GSoC Report: Implementing missing APIs of Web-Extension. 
+			</div>
+			<div class="blog-date">
+				August'2017
+			</div>
+			<div class="blog-data-brief">
+
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;So, we are in the final week of GSoC. This was my second time trying, I applied to GSoC last year as well, but unfortunately didn't got selected, now I think it was for the best. Because In the mean time I have learned a lot about mozilla and how things work here. I recall, when I was working on my first bug, how I messed up several times and done some silly things. Michael and Sebastian were mentoring that bug and they really helped me to understand various things. It felt really great when my first patch got landed.<p><p>
+
+				<h3>Overview Of The Project:</h3><p>
+
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Now coming to our project, our aim was to implement some of the APIs of Web-Extension on android.  But due to some difficulties I faced during implementing this project, I am able to implement only one of the API, ie, browisngData. It enables extensions to clear private data. There are various methods of browsingData API like removeHistory, removeCookies, removeCache etc which helps us to remove specific data from the user profile. I will be writing a blog, on how one can use these methods in their addons.<p>
+
+				<h3>Bugs List:</h3><p>
+
+				Here are the tracking bugs for browsingData and contextMenus API :<p>
+
+				<ul class = "anchor-style">
+					<li><a class = "nostyle" href="https://bugzilla.mozilla.org/show_bug.cgi?id=1362118">Bug 1362118: [tracking] browsingData API support for Android WebExtensions.</a></li>
+					<li><a class = "nostyle" href="https://bugzilla.mozilla.org/show_bug.cgi?id=1269062">Bug 1269062: [tracking] ContextMenus API support for Android WebExtensions.</a></li>
+					
+				</ul>
+
+				Here is the list of bugs which we worked on during GSoC : <p>
+
+				<ul class = "anchor-style">
+					<li><a class = "nostyle" href="https://bugzilla.mozilla.org/show_bug.cgi?id=1362994">Bug 1362994 - Implement browsingData.settings WebExtesnion API method on android.</a></li>
+					<li><a class = "nostyle" href="https://bugzilla.mozilla.org/show_bug.cgi?id=1362996">Bug 1362996 - Implement browsingData.removeCache WebExtesnion API method on android.</a></li>
+					<li><a class = "nostyle" href="https://bugzilla.mozilla.org/show_bug.cgi?id=1362998">Bug 1362998 - Implement browsingData.removeCookies WebExtesnion API method on android.</a></li>
+					<li><a class = "nostyle" href="https://bugzilla.mozilla.org/show_bug.cgi?id=1363001">Bug 1363001 - Implement browsingData.Downloads WebExtesnion API method on android.</a></li>
+					<li><a class = "nostyle" href="https://bugzilla.mozilla.org/show_bug.cgi?id=1363004">Bug 1363004 - Implement browsingData.removeFormData WebExtesnion API method on android.</a></li>
+					<li><a class = "nostyle" href="https://bugzilla.mozilla.org/show_bug.cgi?id=1363010">Bug 1363010 - Implement browsingData.removeHistory WebExtesnion API method on android.</a></li>
+					<li><a class = "nostyle" href="https://bugzilla.mozilla.org/show_bug.cgi?id=1363012">Bug 1363012 - Implement browsingData.removePasswords WebExtesnion API method on android.</a></li>
+					<li><a class = "nostyle" href="https://bugzilla.mozilla.org/show_bug.cgi?id=1362996">Bug 1362996 - Implement browsingData.removeDownloads WebExtesnion API method on android.</a></li>
+					<li><a class = "nostyle" href="https://bugzilla.mozilla.org/show_bug.cgi?id=1363014">Bug 1363014 - Implement browsingData.remove WebExtesnion API method on android.</a></li>
+				</ul>
+
+				<h3>Difficulites Faced:</h3><p>
+
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;There were some difficulties which we faced during the implementation of this project. I started with the implementation of settings method, which enable addons to get user preferences for clearing browsing data.We faced some issues but not so difficult to solve.<p>
+
+				&nbsp;&nbsp;&nbsp;&nbsp;Then we moved on to implementing the removeHistory method. This was the one where we faced a quite hurdles. On firefox for android, we store history in SqliteDB, we've two tables, one is history and another one is visits. For every history items, we can have many visits. We've local and remote visits, which we used to weight sites for top sites, highlights and all, to display on our home page. In addition, we need to perform all these operations in sync safe manner. While removing history items, we do not want to mess our sync operation and check it does not suffer from performance or concurrency issues. The bug is still in review and work is being done on it. Others were not so difficult. Some of them have been landed and some are in process to land. 
+
+				<h3>Special Thanks to:</h3><p>
+
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I would like to thank my mentor Sebastian Kaspari for all of his efforts.  He is really a great mentor one can ask for. It would not be possible to complete this project if not for Sebastian's guidance. He helped me solve various issues during this program. I am really grateful to you for giving me this opportunity. I have learned a lot of things during this program. Also, I want to extend my regards to all the members/contributors of Mozilla who helped me solve issues at some point and reviewed my patches.<br>
+
+				<h3>Future Work:</h3><p>
+
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;It's been around two years contributing to Mozilla.   I really like it here. People are really humble and friendly. I will be sticking around a lot. Trying to help fix bugs, implementing new features and maybe more. I also intend to finish my work regarding contextMenus API.<br>
+
+				<div class="text-center">Thanks for reading!!</div>
+			</div>
+
+			<div class="menu-options middle text-center">
+				<div class="menu-text">
+					<a class="nostyle" href="index.html">home</a>
+				</div>
+			</div>
+
+			<hr>
+
+			<div class="middle footer text-center">
+				&#169; 2016 Tushar Saini. Made In India, with &#9829;.
+			</div>
+
+		</div>
+
+	</body>
+</html>

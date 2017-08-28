@@ -157,12 +157,12 @@ a:hover {
 /* Blog related CSS */
 .blog-data-box {
 	margin-top: 3%;
-	width: 35%;
+	width: 45%;
 }
 
 .blog-data-title {
 	color: #003366;
-	font-family: 'Roboto Slab', sans-serif;
+	font-family: 'Roboto', sans-serif;
 	font-style: normal;
 	font-weight: 400;
 	font-size: 2.5em;
@@ -170,12 +170,11 @@ a:hover {
 
 .blog-data-brief {
 	font-weight: 400;
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Roboto Slab', sans-serif;
 	font-style: normal;
 	color: #262626;
 	font-size: 1.2em;
 	padding-top: 3%;
-	text-align: justify;
 }
 
 .quote-style {
